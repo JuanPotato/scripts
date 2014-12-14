@@ -499,7 +499,7 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         }
         
         for (var i = 0; i < numMisc; i++) {
-            message = message.replace(/▓/igm, misc[i]);
+            message = message.replace(/▓/im, misc[i]);
         }
         
         iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML=message;
