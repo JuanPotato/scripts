@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         New emojis+ :3
 // @namespace    awkward_potato
-// @version      2.2c
+// @version      2.3
 // @description  adds many many more emojis to the oneplus forums
 // @author       awkward_potato, EyeZiS
 // @include      https://forums.oneplus.net/threads/*
@@ -492,15 +492,6 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         message = message.replace(em[x], li[x]);
         console.log(message);
         }
-        /*message = message.replace(/&gt;:3/igm, '<img src="http://i.imgur.com/77QKaCF.png">&nbsp;');
-        message = message.replace(/:3/igm, '<img src="http://i.imgur.com/xQEgir2.png">&nbsp;');
-        message = message.replace(/;3/igm, '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;');
-        message = message.replace(/:'3/igm, '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;');
-        message = message.replace(/x#3/igm, '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;');
-        message = message.replace(/=3/igm, '<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;');
-        message = message.replace(/8\)/igm, '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;');
-        message = message.replace(/&gt;:\(/igm, ' :mad: ');
-        message = message.replace(/:poop:/igm, '<img src="http://i.imgur.com/FDP39zz.png">&nbsp;');*/
 
         iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML=message;
     });
