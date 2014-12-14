@@ -456,7 +456,12 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         } else if (document.getElementsByClassName('redactor_textCtrl redactor_MessageEditor redactor_BbCodeWysiwygEditor redactor_')[0]) {
             iframe2 = document.getElementsByClassName('redactor_textCtrl redactor_MessageEditor redactor_BbCodeWysiwygEditor redactor_')[0];
         }
-            var message = iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML;
+        var quoteReg=/(\[QUOTE\]?[\s\S]*?\[\/QUOTE\])/igm
+        
+        var message = iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML;
+        var misc = message.match(quoteReg);
+        var numMisc = (misc === null) ? 0 : misc.length;
+        message = message.replace(quoteReg, "▓");
         var em = [/:3&lt;3/igm,/&gt;:3/igm,/:'3/igm, 
         /x#3/igm,/=3/igm,
         /8\)/igm,/&gt;:\(/igm, 
@@ -492,7 +497,11 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         message = message.replace(em[x], li[x]);
         console.log(message);
         }
-
+        
+        for (var i = 0; i < numMisc; i++) {
+            message = message.replace(/▓/igm, misc[i]);
+        }
+        
         iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML=message;
     });
 }
