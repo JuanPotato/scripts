@@ -463,7 +463,7 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         /:poop:/igm, /X\)/igm,
         /}:\(/igm, /:\|/igm, 
         /-\.-/igm, /:\\/igm,
-        /:\//igm, /:'\(/igm,
+        /(\:\/)(?![\/])/igm, /:'\(/igm,
         /:o/igm, /D:/igm,
         /:O/igm, /X\(/igm,
         /\\o\//igm, /o\//igm,
