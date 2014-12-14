@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         New emojis+ :3
 // @namespace    awkward_potato
-// @version      2.2
+// @version      2.2a
 // @description  adds many many more emojis to the oneplus forums
 // @author       awkward_potato, EyeZiS
 // @include      https://forums.oneplus.net/threads/*
@@ -459,7 +459,7 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
             var message = iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML;
         var em = [/&gt;:3/igm,/:3/igm,/;3/igm,/:'3/igm,/x#3/igm,/=3/igm,/8\)/igm,/&gt;:\(/igm,/:poop:/igm, /X\)/igm,
         /}:\(/igm, /:\|/igm, /-\.-/igm, /:\\/igm, /:\//igm, /:'\(/igm, /:o/igm, /D:/igm, /:O/igm, /X\(/igm,/\\o\//igm,
-        /o\//igm, /\\o/igm, />_</igm, /B\)/igm, /<3/igm, /:3<3/igm];
+        /o\//igm, /\\o/igm, /&gt;_&lt;/igm, /B\)/igm, /&lt;3/igm, /:3&lt;3/igm];
         var li = ['<img src="http://i.imgur.com/77QKaCF.png">&nbsp;','<img src="http://i.imgur.com/xQEgir2.png">&nbsp;',
         '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;','<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;',
         '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;','<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;',
