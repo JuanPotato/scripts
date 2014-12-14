@@ -468,14 +468,14 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
             iframe2 = document.getElementsByClassName('redactor_textCtrl redactor_MessageEditor redactor_BbCodeWysiwygEditor redactor_')[0];
         }
             var message = iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML;
-        message = message.replace('&gt;:3', '<img src="http://i.imgur.com/77QKaCF.png">&nbsp;');
-        message = message.replace(':3', '<img src="http://i.imgur.com/xQEgir2.png">&nbsp;');
-        message = message.replace(';3', '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;');
-        message = message.replace(":'3", '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;');
-        message = message.replace("x#3", '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;');
-        message = message.replace("=3", '<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;');
-        message = message.replace("8)", '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;');
-        message = message.replace("&gt;:(", ' :mad: ');
+        message = message.replace(/&gt;:3/igm, '<img src="http://i.imgur.com/77QKaCF.png">&nbsp;');
+        message = message.replace(/:3/igm, '<img src="http://i.imgur.com/xQEgir2.png">&nbsp;');
+        message = message.replace(/;3/igm, '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;');
+        message = message.replace(/:'3/igm, '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;');
+        message = message.replace(/x#3/igm, '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;');
+        message = message.replace(/=3/igm, '<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;');
+        message = message.replace(/8\)/igm, '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;');
+        message = message.replace(/&gt;:\(/igm, ' :mad: ');
         
         iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML=message;
     });
