@@ -457,21 +457,22 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
             iframe2 = document.getElementsByClassName('redactor_textCtrl redactor_MessageEditor redactor_BbCodeWysiwygEditor redactor_')[0];
         }
             var message = iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML;
-        var em = [/&gt;:3/igm,/:'3/igm, 
+        var em = [/:3&lt;3/igm,/&gt;:3/igm,/:'3/igm, 
         /x#3/igm,/=3/igm,
         /8\)/igm,/&gt;:\(/igm, 
         /:poop:/igm, /X\)/igm,
         /}:\(/igm, /:\|/igm, 
         /-\.-/igm, /:\\/igm,
         /(\:\/)(?![\/])/igm, /:'\(/igm,
-        /:o/igm, /D:/igm,
-        /:O/igm, /X\(/igm,
+        /:o/gm, /D:/igm,
+        /:O/gm, /X\(/igm,
         /\\o\//igm, /o\//igm,
         /\\o/igm, /&gt;_&lt;/igm,
         /B\)/igm, /&lt;3/igm, 
-        /:3&lt;3/igm,/;3/igm,
+        /;3/igm,
         /:3/igm];
-        var li = ['<img src="http://i.imgur.com/77QKaCF.png">&nbsp;', '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;',
+        var li = ['<img src="http://i.imgur.com/esFvxar.png">&nbsp;','<img src="http://i.imgur.com/77QKaCF.png">&nbsp;',
+        '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;',
         '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;', '<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;',
         '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;', ' :mad: ',
         '<img src="http://i.imgur.com/FDP39zz.png">&nbsp;', '<img src="http://i.imgur.com/X9SqjQ2.png">&nbsp;',
@@ -483,7 +484,7 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         '<img src="http://i.imgur.com/ynah5l8.png">&nbsp;', '<img src="http://i.imgur.com/QRr7pgi.png">&nbsp;',
         '<img src="http://i.imgur.com/QRr7pgi.png">&nbsp;', '<img src="http://i.imgur.com/mU1RKXd.png">&nbsp;',
         '<img src="http://i.imgur.com/5fC1h4r.png">&nbsp;', '<img src="http://i.imgur.com/817AGU4.png">&nbsp;',
-        '<img src="http://i.imgur.com/esFvxar.png">&nbsp;','<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;',
+        '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;',
         '<img src="http://i.imgur.com/xQEgir2.png">&nbsp;'
         ];
         console.log(message);
