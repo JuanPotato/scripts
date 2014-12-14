@@ -18,18 +18,7 @@ if (document.getElementsByClassName('redactor_textCtrl redactor_MessageEditor re
 }
     
     iframe2 = iframe2.contentWindow.document.getElementsByTagName('body')[0];
-function smilies(event){
-    var message = iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML;
-    message = message.replace(':3', '<img src="http://i.imgur.com/xQEgir2.png">&nbsp;');
-    message = message.replace('>:3', '<img src="http://i.imgur.com/77QKaCF.png">&nbsp;');
-    message = message.replace(';3', '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;');
-    message = message.replace(":'3", '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;');
-    message = message.replace("x#3", '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;');
-    message = message.replace("=3", '<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;');
-    message = message.replace("8)", '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;');
-    iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML=message;
-    alert(message); 
-}
+
 function clickHandlerC(index) {
     return function () {
         var pp = iframe2.getElementsByTagName('p');
