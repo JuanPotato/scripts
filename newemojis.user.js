@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         New emojis+ :3
 // @namespace    awkward_potato
-// @version      2.2b
+// @version      2.2c
 // @description  adds many many more emojis to the oneplus forums
 // @author       awkward_potato, EyeZiS
 // @include      https://forums.oneplus.net/threads/*
@@ -474,18 +474,20 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;','<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;',
         '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;','<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;',
         '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;', ' :mad: ','<img src="http://i.imgur.com/FDP39zz.png">&nbsp;',
-        '<img src="http://i.imgur.com/X9SqjQ2.png">&nbsp;', /*'<img src="http://i.imgur.com/I3AS64C.png">&nbsp;',*/
+        '<img src="http://i.imgur.com/X9SqjQ2.png">&nbsp;', '<img src="http://i.imgur.com/I3AS64C.png">&nbsp;',
         '<img src="http://i.imgur.com/JICfIFj.png">&nbsp;', '<img src="http://i.imgur.com/FytXaEh.png">&nbsp;',
         '<img src="http://i.imgur.com/rrekvUn.png">&nbsp;', '<img src="http://i.imgur.com/rrekvUn.png">&nbsp;',
-        '<img src="http://i.imgur.com/KwDoZ9A.png">&nbsp;', /*'<img src="http://i.imgur.com/qOtWwcH.png">&nbsp;',*/
+        '<img src="http://i.imgur.com/KwDoZ9A.png">&nbsp;', '<img src="http://i.imgur.com/qOtWwcH.png">&nbsp;',
         '<img src="http://i.imgur.com/G3w9kef.png">&nbsp;', '<img src="http://i.imgur.com/pQpnv0k.png">&nbsp;',
         '<img src="http://i.imgur.com/AOKKQP1.png">&nbsp;', '<img src="http://i.imgur.com/ynah5l8.png">&nbsp;',
         '<img src="http://i.imgur.com/QRr7pgi.png">&nbsp;', '<img src="http://i.imgur.com/QRr7pgi.png">&nbsp;',
         '<img src="http://i.imgur.com/mU1RKXd.png">&nbsp;', '<img src="http://i.imgur.com/5fC1h4r.png">&nbsp;',
         '<img src="http://i.imgur.com/817AGU4.png">&nbsp;', '<img src="http://i.imgur.com/esFvxar.png">&nbsp;'
         ];
+        console.log(message);
         for(x=0;x<em.length;x++){
         message = message.replace(em[x], li[x]);
+        console.log(message);
         }
         /*message = message.replace(/&gt;:3/igm, '<img src="http://i.imgur.com/77QKaCF.png">&nbsp;');
         message = message.replace(/:3/igm, '<img src="http://i.imgur.com/xQEgir2.png">&nbsp;');
@@ -496,9 +498,7 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         message = message.replace(/8\)/igm, '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;');
         message = message.replace(/&gt;:\(/igm, ' :mad: ');
         message = message.replace(/:poop:/igm, '<img src="http://i.imgur.com/FDP39zz.png">&nbsp;');*/
-        
-        
-        
+
         iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML=message;
     });
 }
