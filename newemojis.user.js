@@ -457,7 +457,16 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
             iframe2 = document.getElementsByClassName('redactor_textCtrl redactor_MessageEditor redactor_BbCodeWysiwygEditor redactor_')[0];
         }
             var message = iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML;
-        message = message.replace(/&gt;:3/igm, '<img src="http://i.imgur.com/77QKaCF.png">&nbsp;');
+        var em = [/&gt;:3/igm,/:3/igm,/;3/igm,/:'3/igm,/x#3/igm,/=3/igm,/8\)/igm,/&gt;:\(/igm,/:poop:/igm];
+        var li = ['<img src="http://i.imgur.com/77QKaCF.png">&nbsp;','<img src="http://i.imgur.com/xQEgir2.png">&nbsp;',
+        '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;','<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;',
+        '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;','<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;',
+        '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;', ' :mad: ','<img src="http://i.imgur.com/FDP39zz.png">&nbsp;',
+        ];
+        for(x=0;x<em.length;x++){
+        message = message.replace(em[x], li[x]);
+        }
+        /*message = message.replace(/&gt;:3/igm, '<img src="http://i.imgur.com/77QKaCF.png">&nbsp;');
         message = message.replace(/:3/igm, '<img src="http://i.imgur.com/xQEgir2.png">&nbsp;');
         message = message.replace(/;3/igm, '<img src="http://i.imgur.com/aEIFMOD.png">&nbsp;');
         message = message.replace(/:'3/igm, '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;');
@@ -465,6 +474,9 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         message = message.replace(/=3/igm, '<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;');
         message = message.replace(/8\)/igm, '<img src="http://i.imgur.com/U7sQeeB.png">&nbsp;');
         message = message.replace(/&gt;:\(/igm, ' :mad: ');
+        message = message.replace(/:poop:/igm, '<img src="http://i.imgur.com/FDP39zz.png">&nbsp;');*/
+        
+        
         
         iframe2.contentWindow.document.getElementsByTagName('body')[0].innerHTML=message;
     });
