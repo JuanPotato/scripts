@@ -469,10 +469,10 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         /}:\(/igm, /:\|/igm, 
         /-\.-/igm, /:\\/igm,
         /(\:\/)(?![\/])/igm, /:'\(/igm,
-        /:o/gm, /D:/igm,
+        /:o(?![\w\d])/gm, /D:/igm,
         /:O/gm, /X\(/igm,
-        /\\o\//igm, /o\//igm,
-        /\\o/igm, /&gt;_&lt;/igm,
+        /\\o\//igm, /o\/(?![\w\d])/igm,
+        /\\o(?![\w\d])/igm, /&gt;_&lt;/igm,
         /B\)/igm, /&lt;3/igm, 
         /;3/igm,
         /:3/igm];
