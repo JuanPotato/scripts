@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         New emojis+ :3
 // @namespace    awkward_potato
-// @version      2.4
+// @version      2.5
 // @description  adds many many more emojis to the oneplus forums
 // @author       awkward_potato, EyeZiS
 // @include      https://forums.oneplus.net/threads/*
@@ -463,19 +463,19 @@ if ($('input[value="Post Reply"]').length > 0 || $('input[value="Reply to Conver
         var numMisc = (misc === null) ? 0 : misc.length;
         message = message.replace(quoteReg, "▓");
         var em = [/:3&lt;3/igm,/&gt;:3/igm,/:'3/igm, 
-        /x#3/igm,/=3/igm,
-        /8\)/igm,/&gt;:\(/igm, 
+        /x#3/gm,/=3/gm,
+        /8\)/gm,/&gt;:\(/gm, 
         /:poop:/igm, /X\)/igm,
-        /}:\(/igm, /:\|/igm, 
-        /-\.-/igm, /:\\/igm,
-        /(\:\/)(?![\/])/igm, /:'\(/igm,
-        /:o(?![\w\d])/gm, /D:/igm,
+        /}:\(/igm, /:\|/gm, 
+        /-\.-/igm, /:\\/gm,
+        /(\:\/)(?![\/])/gm, /:'\(/gm,
+        /:o(?![\w\d])/gm, /D:/gm,
         /:O/gm, /X\(/igm,
         /\\o\//igm, /o\/(?![\w\d])/igm,
         /\\o(?![\w\d])/igm, /&gt;_&lt;/igm,
-        /B\)/igm, /&lt;3/igm, 
-        /;3/igm,
-        /:3/igm];
+        /B\)/gm, /&lt;3/gm, 
+        /;3/gm,
+        /:3/gm];
         var li = ['<img src="http://i.imgur.com/esFvxar.png">&nbsp;','<img src="http://i.imgur.com/77QKaCF.png">&nbsp;',
         '<img src="http://i.imgur.com/3xmvLQB.png">&nbsp;',
         '<img src="http://i.imgur.com/uQKnAHL.png">&nbsp;', '<img src="http://i.imgur.com/s2mnHPj.png">&nbsp;',
