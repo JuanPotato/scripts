@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         New emojis+ :3
 // @namespace    awkward_potato
-// @version      2.1.1
+// @version      2.1a
 // @description  adds many many more emojis to the oneplus forums
 // @author       awkward_potato, EyeZiS
 // @include      https://forums.oneplus.net/threads/*
