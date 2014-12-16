@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mod threads
 // @namespace    awkward_potato
-// @version      0.2
+// @version      0.3
 // @description  help mod threads while not a mod
 // @author       awkward_potato
 // @include      https://forums.oneplus.net/threads/*
@@ -14,6 +14,7 @@ var frame = document.getElementsByClassName('redactor_textCtrl')[0];
 var body = frame.contentWindow.document.getElementsByTagName('body')[0];
 var begging = $('<li><a class="button">begging</a></li>');
 var likes = $('<li><a class="button">likes</a></li>');
+var dup = $('<li><a class="button">dupe</a><input type="text" name="dupe" value="search dupe"></li>');
 $('li.active').before(begging);
 $('li.active').before(likes);
 begging.click(function(){
