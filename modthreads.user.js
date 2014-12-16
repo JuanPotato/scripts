@@ -12,8 +12,8 @@ if ($('input[value="Post Reply"]').length > 0
 ) {
 var frame = document.getElementsByClassName('redactor_textCtrl')[0];
 var body = frame.contentWindow.document.getElementsByTagName('body')[0];
-var begging = $('<button class="button">begging</button>');
-var likes = $('<button class="button">likes</button>');
+var begging = $('<li><a class="button">begging</a></li>');
+var likes = $('<li><a class="button">likes</a></li>');
 $('li.active').before(begging);
 $('li.active').before(likes);
 begging.click(function(){
