@@ -17,11 +17,10 @@ var likes = $('<li><a class="button">likes</a></li>');
 $('li.active').before(begging);
 $('li.active').before(likes);
 begging.click(function(){
-    body.innerHTML = 'Asking for invites is not allowed \n Please join a thread where they give out invites.'+body.innerHTML;
+    body.innerHTML = 'Asking for invites is not allowed<br>Please join a thread where they give out invites.'+body.innerHTML;
 });
 
 likes.click(function(){
-    
+    body.innerHTML = 'Like farming is not allowed'+body.innerHTML;
 });
-body.innerHTML;
 }
