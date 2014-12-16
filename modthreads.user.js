@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mod threads
 // @namespace    awkward_potato
-// @version      0.1
+// @version      0.2
 // @description  help mod threads while not a mod
 // @author       awkward_potato
 // @include      https://forums.oneplus.net/threads/*
