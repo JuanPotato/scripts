@@ -14,7 +14,8 @@ var frame = document.getElementsByClassName('redactor_textCtrl')[0];
 var body = frame.contentWindow.document.getElementsByTagName('body')[0];
 var begging = $('<li><a class="button">begging</a></li>');
 var likes = $('<li><a class="button">likes</a></li>');
-var dup = $('<li><a class="button">dupe</a><input type="text" name="dupe" value="search dupe"></li>');
+var dupe = $('<li><a class="button">dupe</a><input type="text" name="dupe" value="search dupe"></li>');
+$('li.active').before(dupe);
 $('li.active').before(begging);
 $('li.active').before(likes);
 begging.click(function(){
