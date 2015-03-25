@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Reverse
-// @namespace    http://your.homepage/
-// @version      1.0
+// @namespace    https://github.com/JuanPotato/scripts/raw/master/reverse.user.js
+// @version      1.1
 // @description  reverse posts and pots reversed posts
 // @author       Juan Potato (awkward_potato)
 // @match        https://forums.oneplus.net/threads/bulc-txet-desrever.284816/*
