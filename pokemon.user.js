@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         pokemon vortex tools
-// @version      0.3
+// @version      0.4
 // @description  tools, wonderful tools
 // @author       awkward_potato
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
@@ -24,7 +24,7 @@ var username = "";
 var password = "";
 
 /**********ON/OFF SETTINGS**********/
-var doBattle        = false; //enable battles same battle over and over again
+var doBattle        =  true; //enable battles same battle over and over again
 var forceBattle     =  true; //enable being sent to the battle url when at dashboard
 var findPokemon     =  true; //enable finding pokemon alerts
 var findLevels      = false; //enable find specific pokemon levels
@@ -46,15 +46,20 @@ var levelsAndUpToFind = 50; //level and up to alert about pokemon
 var scanFreq = 300; //time to wait between every time the script checks if you saw what you wanted (in milliseconds)
 
 /**********FIGHTING SETTINGS**********/
-var battle = "http://zeta.pokemon-vortex.com/battle.php?gymleader=Brock"; //change this to your battle url
+var battle = "/battle.php?gymleader=Giovanni"; 
+//change this to your battle url, but make sure you remove everything up to the /battle.php?jglasd=dfjklgdfj
+//Even though it does automatically :P
 var attackFreq = 1000; //time to wait between every click while fighting (in milliseconds)
 
 /**********IGNORE EVERYTHING PAST THIS**********/
-var battleUrl    = "zeta.pokemon-vortex.com/battle.php";
-var findUrl      = "zeta.pokemon-vortex.com/map.php";
+var battleUrl    = ".pokemon-vortex.com/battle.php";
+var findUrl      = ".pokemon-vortex.com/map.php";
 var loginUrl     = "www.pokemon-vortex.com/login.php";
-var dashboardUrl = "zeta.pokemon-vortex.com/dashboard.php";
+var dashboardUrl = ".pokemon-vortex.com/dashboard.php";
 
+if(battle.indexOf(".com")>-1){
+    battle = battle.split(".com")[1];
+}
 
 if (doBattle && window.location.href.indexOf(battleUrl) > -1) {
     function startBattle() {
