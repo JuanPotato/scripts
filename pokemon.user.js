@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         pokemon vortex tools
-// @version      0.4
+// @version      0.5
 // @description  tools, wonderful tools
 // @author       awkward_potato
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
@@ -31,7 +31,7 @@ var findLevels      = false; //enable find specific pokemon levels
 var findLevelsAndUp =  true; //enable finding pokemon levels and up
 
 /**********FINDING SETTINGS**********/
-var pokemonToFind = ["turtwig", "squirtle"]; //the pokemon you want to be alerted of
+var pokemonToFind = ["shiny", "shiney","mewtwo"]; //the pokemon you want to be alerted of
 //make sure you get the right spelling
 //TIP: You can also use the above setting as
 //a general keyword searcher in the pokemon you see
@@ -67,7 +67,7 @@ if (doBattle && window.location.href.indexOf(battleUrl) > -1) {
         $("input[value*='Continue']").submit();
         $("a:contains('Rebattle Opponent')").click();
     }
-    if (window.location.href == battle) {
+    if (window.location.href.indexOf(battle) >-1) {
         setInterval(function () {
             startBattle();
         }, attackFreq);
