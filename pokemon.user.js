@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         pokemon vortex tools
-// @version      0.6
+// @version      0.7
 // @description  tools, wonderful tools
 // @author       awkward_potato
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
@@ -20,10 +20,10 @@ var forceBattle     = false; //enable being sent to the battle url when at dashb
 var findPokemon     = false; //enable finding pokemon alerts
 var findLevels      = false; //enable find specific pokemon levels
 var findLevelsAndUp =  true; //enable finding pokemon levels and up
-var autoWalkFind    = false; //enable walking+finding without you doing work
+var autoWalkFind    =  true; //enable walking+finding without you doing work
 
 /**********FINDING SETTINGS**********/
-var pokemonToFind = ["shiny"]; //the pokemon you want to be alerted of
+var pokemonToFind = ["Latias","Latios"]; //the pokemon you want to be alerted of
 //make sure you get the right spelling
 //TIP: You can also use the above setting as
 //a general keyword searcher in the pokemon you see
@@ -35,7 +35,11 @@ var levelsToFind = ["9"]; //The specific levels you want to be alerted for
 var levelsAndUpToFind = 30; //level and up to alert about pokemon
 //dont make this a string or array
 
-var scanFreq = 100; //time to wait between every time the script checks if you saw what you wanted (in milliseconds)
+var scanFreq = 75; //time to wait between every time the script checks if you saw what you wanted (in milliseconds)
+
+var isDoneLoadingFreq = 400; //time to wait between checking if looking for pokemon has finished loading (in milli)
+//dont make this too low (keep it how it is, it works fine) unless you have very super speedy internet
+//THE LOWER THIS IS THE HIGHER CHANCE YOU HAVE OF LOSING A LEGEND
 
 /**********FIGHTING SETTINGS**********/
 var battle = "/battle.php?bid="; 
@@ -130,25 +134,28 @@ if (doBattle && window.location.href.indexOf(battleUrl) > -1) {
 
         if(autoWalkFind){
             b = setInterval(function(){
-                switch(whichMove){
-                    case 1:
-                        fireKey(document,37);
-                        whichMove = 2;
-                        break;
-                    case 2:
-                        fireKey(document,38);
-                        whichMove = 3;
-                        break;
-                    case 3:
-                        fireKey(document,39);
-                        whichMove = 4;
-                        break;
-                    case 4:
-                        fireKey(document,40);
-                        whichMove = 1;
-                        break;
+                var isLoading = $("#pkmnappear").text().indexOf("Please wait") > -1;
+                if(!isLoading){
+                    switch(whichMove){
+                        case 1:
+                            fireKey(document,37);
+                            whichMove = 2;
+                            break;
+                        case 2:
+                            fireKey(document,38);
+                            whichMove = 3;
+                            break;
+                        case 3:
+                            fireKey(document,39);
+                            whichMove = 4;
+                            break;
+                        case 4:
+                            fireKey(document,40);
+                            whichMove = 1;
+                            break;
+                    }
                 }
-            },2000);
+            },isDoneLoadingFreq);
         }
 
         a = setInterval(function () {
