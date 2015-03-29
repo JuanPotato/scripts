@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         pokemon vortex tools
-// @version      0.7
+// @version      0.8
 // @description  tools, wonderful tools
 // @author       awkward_potato
 // @require      http://code.jquery.com/jquery-1.11.0.min.js
@@ -15,8 +15,8 @@ var username = "";
 var password = "";
 
 /**********ON/OFF SETTINGS**********/
-var doBattle        = false; //enable battles same battle over and over again
-var forceBattle     = false; //enable being sent to the battle url when at dashboard
+var doBattle        =  true; //enable battles same battle over and over again
+var forceBattle     =  true; //enable being sent to the battle url when at dashboard
 var findPokemon     = false; //enable finding pokemon alerts
 var findLevels      = false; //enable find specific pokemon levels
 var findLevelsAndUp =  true; //enable finding pokemon levels and up
@@ -59,7 +59,7 @@ var thirdPokemonName = ""; // if empty it will be skipped
 var fourtPokemonName = ""; // if not found it will be skipped
 var fifthPokemonName = ""; // Make sure you spell right :p
 var sixthPokemonName = ""; // 
-var attackFreq = 700; //time to wait between every click while fighting (in milliseconds)
+var attackFreq = 500; //time to wait between every click while fighting (in milliseconds)
 
 /**********IGNORE EVERYTHING PAST THIS**********/
 var pokeNames = [firstPokemonName, seconPokemonName, thirdPokemonName, fourtPokemonName, fifthPokemonName, sixthPokemonName];
@@ -68,6 +68,8 @@ var battleUrl    = ".pokemon-vortex.com/battle.php";
 var findUrl      = ".pokemon-vortex.com/map.php";
 var loginUrl     = "www.pokemon-vortex.com/login.php";
 var dashboardUrl = ".pokemon-vortex.com/dashboard.php";
+var attTimes = 0;
+var moveTimes = 0;
 
 if(battle.indexOf(".com")>-1){
     battle = battle.split(".com")[1];
@@ -88,7 +90,15 @@ if (doBattle && window.location.href.indexOf(battleUrl) > -1) {
     }
     if (window.location.href.indexOf(battle) >-1) {
         setInterval(function () {
-            startBattle();
+            if($("#loading").css("visibility") == "hidden"){
+                startBattle();
+                attTimes = 0;
+            }else{
+                attTimes++;
+            }
+            if(times >= 100)
+                location.reload(true);
+
         }, attackFreq);
     } else {
         window.location.href = battle;
@@ -154,7 +164,12 @@ if (doBattle && window.location.href.indexOf(battleUrl) > -1) {
                             whichMove = 1;
                             break;
                     }
+                    moveTimes=0;
+                }else{
+                    moveTimes++;
                 }
+                if(moveTimes >= 100)
+                    location.reload(true);
             },isDoneLoadingFreq);
         }
 
