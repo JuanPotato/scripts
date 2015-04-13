@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         No parrots plz :(
 // @namespace    awkward_potato
-// @version      1.0.1
+// @version      1.0.2
 // @description  removes all parrot gifs
 // @author       awkward_potato
 // @match        *://forums.oneplus.net/*
@@ -11,7 +11,7 @@
 // *= means contains. So img[src*=hi] would select any img with "hi" in the src
 // = just means equals :p
 
-var curVersion = "1.0.1";
+var curVersion = "1.0.2";
 
 var block = [
     'img[src*="http://imgs.su/users/25384/"]',
@@ -31,8 +31,10 @@ var block = [
     'img[src="https://forums.oneplus.net/data/attachments/290/290976-13d2c87d597ba5c56edff9a85dcef8df.jpg"]'
 ];
 
-for(var i = 0; i < block.length; i++)
-    $(block[i]).remove();
+function clear(){
+    for(var i = 0; i < block.length; i++)
+        $(block[i]).remove();
+}
 
 function modal(title, content, btns){
     var overlayObj = $('<div style="position: fixed;margin: auto;top: 0;left: 0;width: 100%;height: 100%;z-index: 209998;opacity: 0.9;filter: alpha(opacity=90);background-color: rgb(255,255,255);"></div>');
@@ -117,6 +119,10 @@ function update(manual) {
         }
     });
 }
+
+setInterval(function(){
+    clear();
+},5000);
 
 if(location.href.length < 28)
     update();
