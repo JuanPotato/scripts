@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         No parrots plz :(
 // @namespace    awkward_potato
-// @version      1.0.0
+// @version      1.0.1
 // @description  removes all parrot gifs
 // @author       awkward_potato
 // @match        *://forums.oneplus.net/*
@@ -11,7 +11,7 @@
 // *= means contains. So img[src*=hi] would select any img with "hi" in the src
 // = just means equals :p
 
-var curVersion = "1.0.0";
+var curVersion = "1.0.1";
 
 var block = [
     'img[src*="http://imgs.su/users/25384/"]',
@@ -26,6 +26,7 @@ var block = [
     'img[src="http://imgs.su/users/25384/1428422886.jpg"]',
     'img[src="http://imgs.su/users/25384/1428752821.jpg"]',
     'img[src="http://s8.postimg.org/a3ztgnz1t/image.gif"]',
+    'img[src*="https://forums.oneplus.net/attachments/iamacat-gif."]',
     'img[src="https://forums.oneplus.net/attachments/c__data_users_defapps_appdata_internetexplorer_temp_saved-images_9-gif.290805/"]',
     'img[src="https://forums.oneplus.net/data/attachments/290/290976-13d2c87d597ba5c56edff9a85dcef8df.jpg"]'
 ];
