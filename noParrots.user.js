@@ -30,7 +30,8 @@ var block = [
     'img[src="http://s8.postimg.org/a3ztgnz1t/image.gif"]',
     'img[src*="https://forums.oneplus.net/attachments/iamacat-gif."]',
     'img[src="https://forums.oneplus.net/attachments/c__data_users_defapps_appdata_internetexplorer_temp_saved-images_9-gif.290805/"]',
-    'img[src="https://forums.oneplus.net/data/attachments/290/290976-13d2c87d597ba5c56edff9a85dcef8df.jpg"]'
+    'img[src="https://forums.oneplus.net/data/attachments/290/290976-13d2c87d597ba5c56edff9a85dcef8df.jpg"]',
+    'img[src="http://www.picgifs.com/graphics/p/parrot/graphics-parrot-032035.gif"]'
 ];
 
 function clear(){
