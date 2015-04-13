@@ -12,6 +12,8 @@
 // = just means equals :p
 var block = [
     'img[src*="http://imgs.su/users/25384/"]',
+    'img[src="http://imgs.su/users/25384/1428422886.jpg"]',
+    'img[src="http://imgs.su/users/25384/1428752821.jpg"]',
     'img[src*="http://uskirill.com/parrot/img/"]', 
     'img[src*="https://forums.oneplus.net/attachments/1428422886-gif."]',
     'img[src*="https://forums.oneplus.net/attachments/anticlockwise-gif."]',
