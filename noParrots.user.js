@@ -25,6 +25,7 @@ var block = [
     'img[src*="https://forums.oneplus.net/data/avatars/l/237/237743.jpg"]',
     'img[src*="https://forums.oneplus.net/data/avatars/l/406/406960.jpg"]',
     'img[src*="https://forums.oneplus.net/data/avatars/l/28/28769.jpg"]',
+    'img[src*="https://forums.oneplus.net/data/avatars/l/418/418224.jpg"]',
     'img[src="http://imgs.su/users/25384/1428422886.jpg"]',
     'img[src="http://imgs.su/users/25384/1428752821.jpg"]',
     'img[src="http://s8.postimg.org/a3ztgnz1t/image.gif"]',
