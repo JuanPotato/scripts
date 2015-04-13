@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         No parrots plz :(
 // @namespace    awkward_potato
-// @version      0.1
+// @version      0.2
 // @description  removes all parrot gifs
 // @author       awkward_potato
 // @match        *://*/*
