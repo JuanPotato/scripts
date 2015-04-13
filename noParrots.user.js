@@ -11,7 +11,7 @@
 // *= means contains. So img[src*=hi] would select any img with "hi" in the src
 // = just means equals :p
 
-var curVersion = "1.0.2";
+var curVersion = "1.0.3";
 
 var block = [
     'img[src*="http://imgs.su/users/25384/"]',
