@@ -5,7 +5,6 @@
 // @description  removes all parrot gifs
 // @author       awkward_potato
 // @match        *://*/*
-// @require      http://code.jquery.com/jquery-1.11.0.min.js
 // @grant        none
 // ==/UserScript==
 //If you are going to manually add some then you need to know this
