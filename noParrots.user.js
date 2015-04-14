@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         No parrots plz :(
 // @namespace    awkward_potato
-// @version      1.0.7
+// @version      1.0.8
 // @description  removes all parrot gifs
 // @author       awkward_potato
 // @match        *://forums.oneplus.net/*
@@ -11,7 +11,7 @@
 // *= means contains. So img[src*=hi] would select any img with "hi" in the src
 // = just means equals :p
 
-var curVersion = "1.0.7";
+var curVersion = "1.0.8";
 $(document).ready(function() {
     var block = [
         'img[src*="http://imgs.su/users/25384/"]',
@@ -106,7 +106,7 @@ $(document).ready(function() {
                     v1[y] = parseInt(v1[y]);
                 }
                 if (v1[0] < v2[0] || v1[1] < v2[1] || v1[2] < v2[2]) {
-                    var updateText = "New version found! \nWould you like to view the release page and update?";
+                    var updateText = "New parrot remover found! \nWould you like to view the release page and update?";
                     new modal('Update!', updateText, {
                         'Yes': {
                             type: 'red',
