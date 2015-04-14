@@ -25,6 +25,7 @@ $(document).ready(function() {
         'img[src*="https://forums.oneplus.net/attachments/parrot-gif."]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/237/237743"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/237/237743.jpg"]',
+        'img[src*="https://forums.oneplus.net/attachments/9-gif.292039/"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/586/586861.jpg"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/406/406960.jpg"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/28/28769.jpg"]',
