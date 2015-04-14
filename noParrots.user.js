@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         No parrots plz :(
 // @namespace    awkward_potato
-// @version      1.0.6
+// @version      1.0.7
 // @description  removes all parrot gifs
 // @author       awkward_potato
 // @match        *://forums.oneplus.net/*
@@ -13,7 +13,7 @@
 
 !function(e){"function"==typeof define&&define.amd?define(["jquery"],e):"object"==typeof exports?module.exports=e(require("jquery")):e(jQuery)}(function(e){function n(e){return u.raw?e:encodeURIComponent(e)}function o(e){return u.raw?e:decodeURIComponent(e)}function i(e){return n(u.json?JSON.stringify(e):String(e))}function t(e){0===e.indexOf('"')&&(e=e.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));try{return e=decodeURIComponent(e.replace(c," ")),u.json?JSON.parse(e):e}catch(n){}}function r(n,o){var i=u.raw?n:t(n);return e.isFunction(o)?o(i):i}var c=/\+/g,u=e.cookie=function(t,c,s){if(arguments.length>1&&!e.isFunction(c)){if(s=e.extend({},u.defaults,s),"number"==typeof s.expires){var a=s.expires,d=s.expires=new Date;d.setMilliseconds(d.getMilliseconds()+864e5*a)}return document.cookie=[n(t),"=",i(c),s.expires?"; expires="+s.expires.toUTCString():"",s.path?"; path="+s.path:"",s.domain?"; domain="+s.domain:"",s.secure?"; secure":""].join("")}for(var f=t?void 0:{},p=document.cookie?document.cookie.split("; "):[],l=0,m=p.length;m>l;l++){var x=p[l].split("="),g=o(x.shift()),j=x.join("=");if(t===g){f=r(j,c);break}t||void 0===(j=r(j))||(f[g]=j)}return f};u.defaults={},e.removeCookie=function(n,o){return e.cookie(n,"",e.extend({},o,{expires:-1})),!e.cookie(n)}});
 
-var curVersion = "1.0.6";
+var curVersion = "1.0.7";
 $(document).ready(function() {
     var block = [
         'img[src*="http://imgs.su/users/25384/"]',
@@ -27,6 +27,18 @@ $(document).ready(function() {
         'img[src*="https://forums.oneplus.net/data/avatars/l/237/237743.jpg"]',
         'img[src*="https://forums.oneplus.net/attachments/9-gif.292039/"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/586/586861.jpg"]',
+        'img[src*="http://media.giphy.com/media/xTiTnuDWahh25btZkc/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEdv8WBWO83wAhQvS/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/l41m5TmwEib3878ly/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEduGChcb8p30lnuE/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEdv644YUEC6fUbZu/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEduQrHXCQ2gALHxe/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/l41lStS75gaKCIwrS/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEduT5IQQE0S5a2be/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEduMGdRZnV1VfgVW/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEdvcMfB7KrmjaLmg/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/3oEduG4JynPwguMdRm/giphy.gif"]',
+        'img[src*="http://media.giphy.com/media/l41lP5AwwrJkaDAfC/giphy.gif"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/406/406960.jpg"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/28/28769.jpg"]',
         'img[src*="https://forums.oneplus.net/data/avatars/l/418/418224.jpg"]',
