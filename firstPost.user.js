@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         First Post
-// @version      0.2
+// @version      0.3
 // @description  Find the first post of a user
 // @author       awkward_potato
 // @match        *://forums.oneplus.net/members/*
