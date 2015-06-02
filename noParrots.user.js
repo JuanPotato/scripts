@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         No parrots plz :(
 // @namespace    awkward_potato
-// @version      1.0.8
+// @version      1.0.9
 // @description  removes all parrot gifs
 // @author       awkward_potato
 // @match        *://forums.oneplus.net/*
@@ -11,12 +11,13 @@
 // *= means contains. So img[src*=hi] would select any img with "hi" in the src
 // = just means equals :p
 
-var curVersion = "1.0.8";
+var curVersion = "1.0.9";
 $(document).ready(function() {
     var block = [
         'img[src*="http://imgs.su/users/25384/"]',
         'img[src*="http://s8.postimg.org/a3ztgnz1t/image.gif"]', 
         'img[src*="http://uskirill.com/parrot/img/"]', 
+        'img[src*="XMhSXJ2.gif"]', 
         'img[src*="https://forums.oneplus.net/attachments/1428422886-gif."]',
         'img[src*="https://forums.oneplus.net/attachments/anticlockwise-gif."]',
         'img[src*="https://forums.oneplus.net/attachments/clockwise-gif."]',
